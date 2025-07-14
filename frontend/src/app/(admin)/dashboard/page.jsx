@@ -1,5 +1,9 @@
-import BookForm from "@/components/BookForm";
+import BookForm from "@/components/Bookform";
 
 export default function dashboard() {
-  return <BookForm />;
+  return (
+    <>
+      <h1>Admin Dashboard</h1>
+    </>
+  );
 }

@@ -82,14 +82,22 @@ export default function Login() {
           />
         </div>
 
-        <div>
+        <div className="flex flex-col justify-center sm:flex-row gap-3 mt-4">
           <button
             type="submit"
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg shadow"
+            className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg shadow"
           >
             Submit
           </button>
+
+          <a
+            href="/register"
+            className="w-full sm:w-auto text-center bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-6 rounded-lg shadow transition duration-200"
+          >
+            Register
+          </a>
         </div>
+
         {error.length > 0 && (
           <div className="mt-2 space-y-1">
             {error.map((msg, idx) => (

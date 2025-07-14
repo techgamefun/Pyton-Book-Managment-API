@@ -2,7 +2,7 @@
 
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
-import axios from "@/lib/api"; // make sure this is your axios instance
+import apiCall from "@/lib/api"; // make sure this is your apiCall instance
 import { useRouter } from "next/navigation";
 
 export default function BookForm({ bookId }) {
@@ -13,7 +13,7 @@ export default function BookForm({ bookId }) {
   useEffect(() => {
     const fetchBook = async () => {
       if (bookId) {
-        const res = await axios.get(`/books/${bookId}/`);
+        const res = await apiCall.get(`/books/${bookId}/`);
         reset(res.data); // populate form
       }
     };
@@ -23,11 +23,11 @@ export default function BookForm({ bookId }) {
   const onSubmit = async (data) => {
     try {
       if (bookId) {
-        await axios.put(`/books/${bookId}/`, data);
+        await apiCall.put(`/books/${bookId}/`, data);
       } else {
-        await axios.post("/books/", data);
+        await apiCall.post("/books/", data);
       }
-      router.push("/books"); // redirect after submit
+      router.push("/dashboard/books"); // redirect after submit
     } catch (err) {
       console.error("Error submitting form:", err.response?.data || err);
     }

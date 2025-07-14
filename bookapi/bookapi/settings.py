@@ -25,8 +25,7 @@ SECRET_KEY = 'django-insecure-37ak1k&j+szguw+yxie1#_t^*fauei0v*sf44*rqiy8b($ok=-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 # Application definition
 
@@ -156,7 +155,7 @@ from datetime import timedelta
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'bookapi.auth.CookieJWTAuthentication',
     )
 }
 
