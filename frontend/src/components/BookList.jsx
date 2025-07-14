@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import apiCall from "@/lib/api"; // Your configured Axios instance
-import BookForm from "./BookForm.jsx";
+import BookForm from "./BookForm";
 
 export default function BookList({ isAuthenticated }) {
   const [books, setBooks] = useState([]);
