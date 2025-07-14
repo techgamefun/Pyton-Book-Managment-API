@@ -35,8 +35,8 @@ class CustomTokenObtainPairView(TokenObtainPairView):
             key="access_token",
             value=access_token,
             httponly=True,
-            samesite="Lax",
-            secure=False,  # change to True in production
+            samesite="None",
+            secure=True,  
             max_age=3600,
               path="/"
         )
@@ -44,8 +44,8 @@ class CustomTokenObtainPairView(TokenObtainPairView):
             key="refresh_token",
             value=refresh_token,
             httponly=True,
-            samesite="Lax",
-            secure=False,
+            samesite="None",
+            secure=True,  
             max_age=7 * 24 * 3600,
         )
         return res
