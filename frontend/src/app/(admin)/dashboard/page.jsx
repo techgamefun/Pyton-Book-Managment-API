@@ -1,4 +1,4 @@
-import BookForm from "@/components/Bookform.jsx";
+import BookForm from "@/components/BookForm.jsx";
 
 export default function dashboard() {
   return (

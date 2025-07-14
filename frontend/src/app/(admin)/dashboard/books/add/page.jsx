@@ -1,4 +1,4 @@
-import BookForm from "@/components/Bookform";
+import BookForm from "@/components/BookForm.jsx";
 
 export default function addBook() {
   return <BookForm></BookForm>;
