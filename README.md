@@ -1,6 +1,6 @@
 # Book Store API & Frontend
 
-A full-stack web application for managing books with a Django REST API backend and Next.js frontend. Features JWT authentication with HTTP-only cookies and a responsive admin dashboard.
+A full-stack web application for managing books with a Django REST API backend and Next.js frontend. Features JWT authentication with HTTP-only cookies and a responsive admin dashboard. https://pyton-book-managment-api-dbvy.vercel.app/
 
 ## 🚀 Features
 
